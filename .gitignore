@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 运行时生成数据（数据库/照片/报表/日志）——不入库
+data/
+!data/.gitkeep
+
+# 车牌识别训练产物（体积大，按需用 tools 生成）
+server/lpr/models/*.onnx
+server/lpr/models/*.pt
+server/lpr/models/templates/
+datasets/train/
+datasets/val/
+datasets/test/
+datasets/external/
+datasets/real/
+# 演示图库由 tools/gen_synthetic_plates.py 生成（保留目录与 labels 结构）
+datasets/plates/blue/*.jpg
+datasets/plates/green/*.jpg
+
+# 前端依赖与构建产物
+node_modules/
+web/**/dist/
+.tmp_three/
+
+# 3D 预览渲染图/演示视频（由 assets_3d 交付，运行时不加载，体积大不入库）
+# 说明：仿真端运行只需 assets/*.glb 与 vendor/three.module.js，renders/ 仅为文档预览
+web/sim3d/assets/renders/
+
+# 操作系统 / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+.venv-*/
+build/
+native-dist/

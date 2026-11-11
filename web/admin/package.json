@@ -1,0 +1,8 @@
+{
+  "name": "parking-admin-static",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:i18n": "node --test test/i18n.test.mjs"
+  }
+}

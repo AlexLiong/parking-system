@@ -1,0 +1,946 @@
+{
+  "source": "server/lpr/render.py + MIT reference glyphs",
+  "license": "MIT; reference glyphs assets from Pengfei8324/chinese_license_plate_generator",
+  "assets_manifest": "server/lpr/models/reference-plates/manifest.json",
+  "seed": 20261024,
+  "purpose": "product demo, generated plate images (blue/green/green_large/yellow); not evaluation results",
+  "format_version": 2,
+  "samples": [
+    {
+      "sample_id": "blue-000-clean",
+      "file": "blue-000-clean.png",
+      "sha256": "55941d673e2800a216bb445727cfe520df094dc25e211b3a22f4bb68ceaf92c2",
+      "plate": "粤F4K1CZ",
+      "plate_type": "blue",
+      "style": "blue",
+      "color": "blue",
+      "vehicle_kind": "sedan",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "blue-001-clean",
+      "file": "blue-001-clean.png",
+      "sha256": "1e0b0e2a067c86038fb4a78df15e2447364b66ede0260544f7510fd64f00b993",
+      "plate": "甘N35MYY",
+      "plate_type": "blue",
+      "style": "blue",
+      "color": "blue",
+      "vehicle_kind": "sedan",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "blue-002-clean",
+      "file": "blue-002-clean.png",
+      "sha256": "d6b26adf4e28859a0cf6f144f8174024e0b3f1ea38ce7824186ef56c2f0d907e",
+      "plate": "桂RNRYAB",
+      "plate_type": "blue",
+      "style": "blue",
+      "color": "blue",
+      "vehicle_kind": "sedan",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "blue-003-clean",
+      "file": "blue-003-clean.png",
+      "sha256": "aec64812a729dd34fa66f5ad30d0b7847ab772e1b0bd7c35587e682c314f6906",
+      "plate": "豫PXHGPM",
+      "plate_type": "blue",
+      "style": "blue",
+      "color": "blue",
+      "vehicle_kind": "sedan",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "blue-004-clean",
+      "file": "blue-004-clean.png",
+      "sha256": "822359780cadf09610679d6388892b2f566c60256f95d112779e34b2872975cb",
+      "plate": "苏B2S39K",
+      "plate_type": "blue",
+      "style": "blue",
+      "color": "blue",
+      "vehicle_kind": "sedan",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "green-005-clean",
+      "file": "green_car-000-clean.png",
+      "sha256": "29b839f0a38c025485c1446bf928583b80ca72ca842329e2b7dcabdc2ac9a4dd",
+      "plate": "贵JD8H5PF",
+      "plate_type": "green",
+      "style": "green_car",
+      "color": "green",
+      "vehicle_kind": "hatch",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "green-006-clean",
+      "file": "green_car-001-clean.png",
+      "sha256": "94d54c01e2b6cc989fb9dac2763f748facefcfd16b900d337158e7911949a949",
+      "plate": "渝GDKLV32",
+      "plate_type": "green",
+      "style": "green_car",
+      "color": "green",
+      "vehicle_kind": "hatch",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "green-007-clean",
+      "file": "green_car-002-clean.png",
+      "sha256": "9ec261a939c7b96218b3a3b0b82b6d9b427675a52c3b43d35b699bb03cf38897",
+      "plate": "闽DDXX73X",
+      "plate_type": "green",
+      "style": "green_car",
+      "color": "green",
+      "vehicle_kind": "hatch",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "green-008-clean",
+      "file": "green_car-003-clean.png",
+      "sha256": "a2a091253d9466c031352fef16edd79770aabead2d42b973b51cfca7d66db055",
+      "plate": "辽FD03Z0S",
+      "plate_type": "green",
+      "style": "green_car",
+      "color": "green",
+      "vehicle_kind": "hatch",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "green-009-clean",
+      "file": "green_car-004-clean.png",
+      "sha256": "2b59256812c4bccb061972326e26783560c39d8ce3687195fc58ec51079ab359",
+      "plate": "冀EDA3VZB",
+      "plate_type": "green",
+      "style": "green_car",
+      "color": "green",
+      "vehicle_kind": "hatch",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "green_large-010-clean",
+      "file": "green_large-000-clean.png",
+      "sha256": "4ddb0be3d6d045b9bbbba038c436e758d0e339a10d5594b67faa1b8714ed0a46",
+      "plate": "鄂ABWTXHF",
+      "plate_type": "green_large",
+      "style": "green_large",
+      "color": "green",
+      "vehicle_kind": "van",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "green_large-011-clean",
+      "file": "green_large-001-clean.png",
+      "sha256": "c3b0823b9495f87435be56137d8ea220f08f49315a0d0e6ee07403f17a9e5cea",
+      "plate": "琼BKBF39F",
+      "plate_type": "green_large",
+      "style": "green_large",
+      "color": "green",
+      "vehicle_kind": "van",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "green_large-012-clean",
+      "file": "green_large-002-clean.png",
+      "sha256": "c68da3c6081218e5a2705f58e4c34608d655be6fbdb2738a12028af8c9198a9e",
+      "plate": "贵ABYWFRF",
+      "plate_type": "green_large",
+      "style": "green_large",
+      "color": "green",
+      "vehicle_kind": "van",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "green_large-013-clean",
+      "file": "green_large-003-clean.png",
+      "sha256": "b146d529b378a777b6fa1adb531d31120526c60ae9bacbf722d990318c1ccd91",
+      "plate": "鄂JQ8PGQF",
+      "plate_type": "green_large",
+      "style": "green_large",
+      "color": "green",
+      "vehicle_kind": "van",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "yellow-014-clean",
+      "file": "yellow-000-clean.png",
+      "sha256": "45f026de56f0d7b607a27a0bf85b90ffd875a81cffd74bd2b605169ce40e685e",
+      "plate": "桂ES6EKB",
+      "plate_type": "yellow",
+      "style": "yellow",
+      "color": "yellow",
+      "vehicle_kind": "van",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "yellow-015-clean",
+      "file": "yellow-001-clean.png",
+      "sha256": "8666a92117453c87aa71e21b850bcb0b27fcdc0a3cf12be17d88fff7d6113905",
+      "plate": "渝B39USG",
+      "plate_type": "yellow",
+      "style": "yellow",
+      "color": "yellow",
+      "vehicle_kind": "van",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "yellow-016-clean",
+      "file": "yellow-002-clean.png",
+      "sha256": "b9d69c5c497f478b4de6b162f88a00f38dbfcd35acc3d5e7eb91668a3900fc33",
+      "plate": "苏N8D8ZQ",
+      "plate_type": "yellow",
+      "style": "yellow",
+      "color": "yellow",
+      "vehicle_kind": "van",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    },
+    {
+      "sample_id": "yellow-017-clean",
+      "file": "yellow-003-clean.png",
+      "sha256": "6bf01cef7575bfd695f319f2547750a58538155a3ec97bd8a4ce7974e9cd2a9c",
+      "plate": "贵BBYWFR",
+      "plate_type": "yellow",
+      "style": "yellow",
+      "color": "yellow",
+      "vehicle_kind": "van",
+      "condition": "clean",
+      "parameters": {
+        "render": "server/lpr/render.py",
+        "seed": 20261024,
+        "scene_size": [
+          960,
+          640
+        ],
+        "plate_scale": 0.62,
+        "augment_level": 0.0
+      },
+      "seed": 20261024,
+      "width": 960,
+      "height": 640,
+      "bbox_xywh": [
+        0,
+        0,
+        960,
+        640
+      ],
+      "corners": [
+        [
+          0,
+          0
+        ],
+        [
+          959,
+          0
+        ],
+        [
+          959,
+          639
+        ],
+        [
+          0,
+          639
+        ]
+      ],
+      "source_kind": "synthetic",
+      "purpose": "demo",
+      "training_eligible": false,
+      "pr2_eligible": false
+    }
+  ]
+}

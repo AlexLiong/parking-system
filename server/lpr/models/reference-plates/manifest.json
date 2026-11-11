@@ -1,0 +1,607 @@
+{
+  "source": "https://github.com/Pengfei8324/chinese_license_plate_generator",
+  "source_commit": "df4757f99e63d7180a59d6c2633f466a339b500b",
+  "license": "MIT; Copyright (c) 2020 leijd",
+  "characters": [
+    "京",
+    "津",
+    "冀",
+    "晋",
+    "蒙",
+    "辽",
+    "吉",
+    "黑",
+    "沪",
+    "苏",
+    "浙",
+    "皖",
+    "闽",
+    "赣",
+    "鲁",
+    "豫",
+    "鄂",
+    "湘",
+    "粤",
+    "桂",
+    "琼",
+    "渝",
+    "川",
+    "贵",
+    "云",
+    "藏",
+    "陕",
+    "甘",
+    "青",
+    "宁",
+    "新",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z"
+  ],
+  "sources": [
+    {
+      "path": "font_model/140_京.jpg",
+      "sha256": "634b9fe0155c1c23c341f6b73df8e816dc8ab4df9abda0d09a37cee701122356"
+    },
+    {
+      "path": "font_model/140_津.jpg",
+      "sha256": "0743a44655cf18561a15005ac59b9378353e587bf0199ecc52ddf3c466f3418d"
+    },
+    {
+      "path": "font_model/140_冀.jpg",
+      "sha256": "e0304c2b88f646d7bd4e3b8b0a266a11971b0454921a9b7553625774bba9e9e8"
+    },
+    {
+      "path": "font_model/140_晋.jpg",
+      "sha256": "36280d5281ad820baac840ef6ccece368a907d5974d29b1a432fb48aaeb22711"
+    },
+    {
+      "path": "font_model/140_蒙.jpg",
+      "sha256": "39c4beb82a7b4a6736af7f78265c4951b4643bfbdf914195b9b393a6be6cc506"
+    },
+    {
+      "path": "font_model/140_辽.jpg",
+      "sha256": "08930b3492ea33b79d51fb8f73b31ddd4664539ef6fbd58157200d3455a607fc"
+    },
+    {
+      "path": "font_model/140_吉.jpg",
+      "sha256": "a2c930961577c9055e421b2a6455a56fe33a7adffff0435ef243a50d8f1fee21"
+    },
+    {
+      "path": "font_model/140_黑.jpg",
+      "sha256": "91cb50e0ac18136abba4bbb94c15db7a574a1f61f6f033d87ef8b0ba9b9a2cb9"
+    },
+    {
+      "path": "font_model/140_沪.jpg",
+      "sha256": "d6ab0bfe3e6eeb5f3789213df39d3ab150537b8225305b348c1f169b126571bf"
+    },
+    {
+      "path": "font_model/140_苏.jpg",
+      "sha256": "df4fb456f0f7ceda72b9c12dcfd44cb83105549da3e9a4ac3db35b09ee829ed8"
+    },
+    {
+      "path": "font_model/140_浙.jpg",
+      "sha256": "e1dad198c52db96c2ed4a258e31960d4d7ec9e62ae77204b22d35563a0cd582a"
+    },
+    {
+      "path": "font_model/140_皖.jpg",
+      "sha256": "1c988fd7061a859bf62344d92fd6c7661f38b8311e1a83d481140aae9ab1b0a1"
+    },
+    {
+      "path": "font_model/140_闽.jpg",
+      "sha256": "dd3c062c3acdeb4f7a9b605cd3c05691e042d41667b57fd16640cf40f79980e7"
+    },
+    {
+      "path": "font_model/140_赣.jpg",
+      "sha256": "aca86e2276bd77525bee80af5876b3c5b53b26c8c589b741f926cf62823f2432"
+    },
+    {
+      "path": "font_model/140_鲁.jpg",
+      "sha256": "b65bf8f2d0da820e96442aaf30d7dc21d30f5286225c20bd607fac7e20479bb4"
+    },
+    {
+      "path": "font_model/140_豫.jpg",
+      "sha256": "6cf788d1982c3d725467bd8f3d1a653e5caf49250cd81b0569eefbbbc539dcb9"
+    },
+    {
+      "path": "font_model/140_鄂.jpg",
+      "sha256": "dd4fdf9932af9f70c384766770d2dca062a01a083df18d216e4a74c709a184b3"
+    },
+    {
+      "path": "font_model/140_湘.jpg",
+      "sha256": "f2bc2cefe3d9a5910ab11b7a610528f0e755eb0efef119f40d34e4f1bbe5e020"
+    },
+    {
+      "path": "font_model/140_粤.jpg",
+      "sha256": "5a17bf5bf7250002dcda087ec49df8ddffb154b8b65f6f0c1cc24b664634f40e"
+    },
+    {
+      "path": "font_model/140_桂.jpg",
+      "sha256": "25c8d05d4354aa6be3f1109f2948fb16422ade56754ee22eb56ea87f6fe5fd64"
+    },
+    {
+      "path": "font_model/140_琼.jpg",
+      "sha256": "03fd1e1de8ccdbc1fe7e6a85e933e7d582df11c4c2600d064098f8c0291e8da5"
+    },
+    {
+      "path": "font_model/140_渝.jpg",
+      "sha256": "e3d93e7af28470727cb286ca5fab15128f67d95091ca620d211f5d66a6470afe"
+    },
+    {
+      "path": "font_model/140_川.jpg",
+      "sha256": "0220f1674ce614b3728014d7357dec0dd7f5ecc0ee8d7c9a4358646555c3e06c"
+    },
+    {
+      "path": "font_model/140_贵.jpg",
+      "sha256": "38cfb166c29188258bb013f738f3879c73a20be8992dff62d0a41aced03e1984"
+    },
+    {
+      "path": "font_model/140_云.jpg",
+      "sha256": "d6de0016dd097bc3ba9eacc507a2af672b1946bf59b547b67ca05be90cd8bb1b"
+    },
+    {
+      "path": "font_model/140_藏.jpg",
+      "sha256": "ee275814cd5e5ec3024ade6139769707b68744da6c72c7918a9bd5ce5f6daae5"
+    },
+    {
+      "path": "font_model/140_陕.jpg",
+      "sha256": "58aba087eceba9b79bb120debb5253c3978c699ea4327d38d7648b48253175ad"
+    },
+    {
+      "path": "font_model/140_甘.jpg",
+      "sha256": "60d93b5f1eb1d7109101f89fcac771ad7ee646f2e98432b5a0059d4c8003720c"
+    },
+    {
+      "path": "font_model/140_青.jpg",
+      "sha256": "1ea4ef7924f8fd809f0ab64a055bbf685441964fdd87e28095183552fcea14ec"
+    },
+    {
+      "path": "font_model/140_宁.jpg",
+      "sha256": "796b92c14668d39520d4987733c2146afaf857611e006f2af8446f23bcabad96"
+    },
+    {
+      "path": "font_model/140_新.jpg",
+      "sha256": "ad3569ebc300e868e11536061ab4f6b858b7830ccd1fd7f601598d1a206a296b"
+    },
+    {
+      "path": "font_model/140_0.jpg",
+      "sha256": "dcaa8b4773d5d5ba36063f7f2b8acb3f5c73dde51e594255cebba830bb86d395"
+    },
+    {
+      "path": "font_model/140_1.jpg",
+      "sha256": "192cbbfa4c33e99cfe72c5a9f11845be015e42adb9e119963ae6379f6b983151"
+    },
+    {
+      "path": "font_model/140_2.jpg",
+      "sha256": "9f549a13d30eafdf301b21d36ec39275efd8633f7f3919301c8878e7be513033"
+    },
+    {
+      "path": "font_model/140_3.jpg",
+      "sha256": "cf1ad3d84fc8208248d34a160d969644683303e69824acfd5a6dd02dba68ba8d"
+    },
+    {
+      "path": "font_model/140_4.jpg",
+      "sha256": "0a86813705c83e6a837334fce2d4432e79546dcbe729ff5f3e21bf46bf98be1a"
+    },
+    {
+      "path": "font_model/140_5.jpg",
+      "sha256": "d195dff73f12c931c34f2a4aa33a76333160c561fcb8e5fb2d8335d31c386fa0"
+    },
+    {
+      "path": "font_model/140_6.jpg",
+      "sha256": "a3d6700cf11cd7773a3951ebd16e45682667d17f4df4f75fe226279212eb1122"
+    },
+    {
+      "path": "font_model/140_7.jpg",
+      "sha256": "391569042ff18a2418064ec4437dd23dfcdad76ee7929c77c8b18a31eccce0ca"
+    },
+    {
+      "path": "font_model/140_8.jpg",
+      "sha256": "ff9418cdd657a219141a388507dd7d00588cf2db47d9177143fe214685f77cf9"
+    },
+    {
+      "path": "font_model/140_9.jpg",
+      "sha256": "2ace3fc3b5755bc634afd63e3679eae0cde603743d36a527e64ea0e83a9c6241"
+    },
+    {
+      "path": "font_model/140_A.jpg",
+      "sha256": "b9666ca7131ac0a4e82588b6e462f722a5d6b6ecf5a908a70d4b317e187cfada"
+    },
+    {
+      "path": "font_model/140_B.jpg",
+      "sha256": "4d729acb0e3cb2ee854db8f85fa2aca6a7c03dea4f05d46fa12185146834e0c2"
+    },
+    {
+      "path": "font_model/140_C.jpg",
+      "sha256": "759699d1c5ea419e6119dfc0e1b28ee7fd8524b6805ce89bb92a2cc4cbbd6858"
+    },
+    {
+      "path": "font_model/140_D.jpg",
+      "sha256": "025c840f3880c9b2a2e952aec716cdee1ca391d46accb6dabf0bd0409bed0c09"
+    },
+    {
+      "path": "font_model/140_E.jpg",
+      "sha256": "a9e68565cb282a8a48e424100fdce17b62889a6844263314e0d432a4ad10d3d0"
+    },
+    {
+      "path": "font_model/140_F.jpg",
+      "sha256": "a842276381cf7a1e4f0c124000c41a1f6ed41f1c2e33251c52359f0c4adaee0c"
+    },
+    {
+      "path": "font_model/140_G.jpg",
+      "sha256": "8077217a51b43b3297d1a493464b5cdd00520f4643efe294cdaedab6f302d51a"
+    },
+    {
+      "path": "font_model/140_H.jpg",
+      "sha256": "2a78f53f1f9c617a425854c9df9c0f2d43a57e34d3906e773ead4f931ae9b114"
+    },
+    {
+      "path": "font_model/140_J.jpg",
+      "sha256": "f0671e3796c45ba783c15c595f8d15014a04e8ab189a3d0503973a03f4571177"
+    },
+    {
+      "path": "font_model/140_K.jpg",
+      "sha256": "4ebdc89e7e87fdba713a1a903873ad8d9614c36a5cfc79a145274a13059703a1"
+    },
+    {
+      "path": "font_model/140_L.jpg",
+      "sha256": "dc9a86913e21ff980500c877f6cf133908845c4635c242def59a97cafdeaf1fa"
+    },
+    {
+      "path": "font_model/140_M.jpg",
+      "sha256": "fc35e793a1fa5a66dbfd97a1bb57117419df3d48e2c4ad923c1f00b09073b330"
+    },
+    {
+      "path": "font_model/140_N.jpg",
+      "sha256": "4521f4c30a6461709f6dbe0fcc881ba10894219a9268ece1c3242292967a4ab1"
+    },
+    {
+      "path": "font_model/140_P.jpg",
+      "sha256": "242e9636767a20f88cbd64c211d5a15d2c71d0ab2351c6021ff6bcd5559e19d5"
+    },
+    {
+      "path": "font_model/140_Q.jpg",
+      "sha256": "58e832f34fbc02d8e92ead9944c499a09c964c6f151528217fa431eaaa435d64"
+    },
+    {
+      "path": "font_model/140_R.jpg",
+      "sha256": "13a252af54980ae2d98f55709f804e338f0026d064148dfed71c9de7155ef666"
+    },
+    {
+      "path": "font_model/140_S.jpg",
+      "sha256": "7a07d8f7c7aee0eae7a4d01955ed05dd40adb4b6494e3c301822c3a8d0dca21f"
+    },
+    {
+      "path": "font_model/140_T.jpg",
+      "sha256": "0eeec57fda74fb3f9e61a5da8ffb64cc5c945c255d18c592f10c47e2f804c092"
+    },
+    {
+      "path": "font_model/140_U.jpg",
+      "sha256": "2404d8642daadeb0b6bb96cdcc7d4e5e5a7f91c3097415d2248503118d9d38b1"
+    },
+    {
+      "path": "font_model/140_V.jpg",
+      "sha256": "d6edd7c380b33d2a8644b2157f8b2fe7926dd264ab19209c318ef26d846bc7c3"
+    },
+    {
+      "path": "font_model/140_W.jpg",
+      "sha256": "4a991ff9febbb16c7fc2d2e07182dfd080e6349f6daa7d5ad1c9da8a09335535"
+    },
+    {
+      "path": "font_model/140_X.jpg",
+      "sha256": "9aad61bb0631b5ae756eb92717e63ff781cb3086328e1c87de9797252c750d5d"
+    },
+    {
+      "path": "font_model/140_Y.jpg",
+      "sha256": "c86c0a0de50d1a21834b3c42f2b1f958817ff1b15972e2296b2472f54a57413d"
+    },
+    {
+      "path": "font_model/140_Z.jpg",
+      "sha256": "5b7e1107a11efa1e2ae8051d3927bc32ff08154282c07813f5c64249fad5536e"
+    },
+    {
+      "path": "font_model/green_京.jpg",
+      "sha256": "ddaa2e703df747b71d0e9e5bfb6db14ff705ae3e57d347bc512ea44e39645b3e"
+    },
+    {
+      "path": "font_model/green_津.jpg",
+      "sha256": "6dc20257e99dba6a2db5b93dc0f61d3cadf471ac92a2ca8824bdc9f93238584e"
+    },
+    {
+      "path": "font_model/green_冀.jpg",
+      "sha256": "127521dbf718e946d6132394eb5527a0794132c303039ee89ec6c031812a28ef"
+    },
+    {
+      "path": "font_model/green_晋.jpg",
+      "sha256": "157e15b34d0c82beac0c58385ee8aa40670046a71d2dfe4dad9ec18aec384aa5"
+    },
+    {
+      "path": "font_model/green_蒙.jpg",
+      "sha256": "a63bc97f0fd6617da80738ac258ef0d39a7aced3b6c8d479e8d01bbee74f73ac"
+    },
+    {
+      "path": "font_model/green_辽.jpg",
+      "sha256": "830380c6f90817251d4f37b46e07ebb6e565b5e5b8f492de4a0823b01b50f53e"
+    },
+    {
+      "path": "font_model/green_吉.jpg",
+      "sha256": "4c9cdecd900da31af1776fddd8574f3327b121c952bf424746ac1458cbad6514"
+    },
+    {
+      "path": "font_model/green_黑.jpg",
+      "sha256": "321f814423a875136473e74897b6ac68a96ce324d645b59027287fb95e510622"
+    },
+    {
+      "path": "font_model/green_沪.jpg",
+      "sha256": "8ca4c94c1261121a6c38b2a69213da3c014f006a5e1bb20ea658122972e50fa8"
+    },
+    {
+      "path": "font_model/green_苏.jpg",
+      "sha256": "990eca2d0d602531ea39c8335f258c767bf160c46b15d06196f283d9b7c29cd2"
+    },
+    {
+      "path": "font_model/green_浙.jpg",
+      "sha256": "fb7a311322e76e4ab720e04bc698cfd57fcfb2993f9a9edb6bd253bfff66e6d5"
+    },
+    {
+      "path": "font_model/green_皖.jpg",
+      "sha256": "63058d8811cf39376587577b4e76961d4f89c67e75a4a52e42e8a6cc85173d64"
+    },
+    {
+      "path": "font_model/green_闽.jpg",
+      "sha256": "3ce6b611bc44f40664b8242f14d3ab08e2c2246ee41a0f9b092b2269f9cccaa6"
+    },
+    {
+      "path": "font_model/green_赣.jpg",
+      "sha256": "5b2b0ae3c31ed323104eefa7bcc8cb69f248705108485502a7c84453e9dcbf76"
+    },
+    {
+      "path": "font_model/green_鲁.jpg",
+      "sha256": "7538b0ac80c944ba26483d2f3a4144f2b8bdc17bbcdb39f6c37bdeed94bb04bc"
+    },
+    {
+      "path": "font_model/green_豫.jpg",
+      "sha256": "a00d13d20c426d749576c0aa3f77a6cf4122354377c073e0738136bb46ffc41a"
+    },
+    {
+      "path": "font_model/green_鄂.jpg",
+      "sha256": "878915721291d1dd2169aaa96da021e1fa7db2dc4d21147fcc49399f8155e808"
+    },
+    {
+      "path": "font_model/green_湘.jpg",
+      "sha256": "5e7bdcf5a9c0d2479307bc8107ce592b943efe6599aaaa4f66b325c79fb6bcee"
+    },
+    {
+      "path": "font_model/green_粤.jpg",
+      "sha256": "28d4e6ea72d6e301c096c0c6088630f19a791b53b0c8590c0567f8c7d61cebf3"
+    },
+    {
+      "path": "font_model/green_桂.jpg",
+      "sha256": "27dae3dc4cc546eff2e46340a12bb36ca3898acc30779115ed56914a08b4084a"
+    },
+    {
+      "path": "font_model/green_琼.jpg",
+      "sha256": "e4ab4b85c5a75563b490c5a10abd610185246c4801b737941dde160ff67303be"
+    },
+    {
+      "path": "font_model/green_渝.jpg",
+      "sha256": "dbe04ca846fa727950aea753f19095cc5421047560e606420bd1d10a23476d53"
+    },
+    {
+      "path": "font_model/green_川.jpg",
+      "sha256": "7ea490cf0c10be745a8c987752fa5419bbbcfbce15f72b0ee7499c155f585392"
+    },
+    {
+      "path": "font_model/green_贵.jpg",
+      "sha256": "60a037be4a01654ca6a20c39092b685a1ac98a3864d5f5550df415563975eda9"
+    },
+    {
+      "path": "font_model/green_云.jpg",
+      "sha256": "7ecbdc4907ae24919dca7fdb9649a0fd3ad583d7c6cfa363381f2487049d0f11"
+    },
+    {
+      "path": "font_model/green_藏.jpg",
+      "sha256": "d7deec82f1578a51e8d2af39073ad3dc1bf73f35404ac62b3e2b9465e9a787c9"
+    },
+    {
+      "path": "font_model/green_陕.jpg",
+      "sha256": "0ad7ed3b45210c576fa9d31191fa8b94652824feac66130cd242212208dc24ec"
+    },
+    {
+      "path": "font_model/green_甘.jpg",
+      "sha256": "6a880e3c0615e2359e7982ad6c31b8e9777c0b6b3271ea020a1d57de2bbc4f96"
+    },
+    {
+      "path": "font_model/green_青.jpg",
+      "sha256": "80b82a94e88b57d0d771d132ae57fb5067bd315838e092519f8f67480045ff25"
+    },
+    {
+      "path": "font_model/green_宁.jpg",
+      "sha256": "c1fbb78cab64eac86191bd9051e02b54c82c8c637dbaf251e8b15ef9e5685d2d"
+    },
+    {
+      "path": "font_model/green_新.jpg",
+      "sha256": "7b401fc9dfe59513526725e1a7e3a487b0346aef87483be42f8d503134e46a17"
+    },
+    {
+      "path": "font_model/green_0.jpg",
+      "sha256": "d97bdd290ce98e13c42031cdbe2eedd1ab7e8790c754a2303efb61bda7242db0"
+    },
+    {
+      "path": "font_model/green_1.jpg",
+      "sha256": "19606881fec76b12605bd281fbeeb6aed6313181f9a4490d6f92473f2a473440"
+    },
+    {
+      "path": "font_model/green_2.jpg",
+      "sha256": "5b2879d8b6ce50939c274ed638709b8f22f3f394cdeb5b7a2a7454577024503f"
+    },
+    {
+      "path": "font_model/green_3.jpg",
+      "sha256": "55abb1c88ebf25b5946236e508d7953d203090aa73a630845813b13e210f572e"
+    },
+    {
+      "path": "font_model/green_4.jpg",
+      "sha256": "5890d5ced7b1c832d0c59c8f5b1f65710e5561f3894ceb34c3a7ea2ba0b90a0a"
+    },
+    {
+      "path": "font_model/green_5.jpg",
+      "sha256": "8148cc2a87ea9ceddf0771ee1976721a02b519ca3bf8a5f4b4a92a0a790931c5"
+    },
+    {
+      "path": "font_model/green_6.jpg",
+      "sha256": "16b2bf4b8d6236915106ce679d138bd89ee49ec6d8c0ed621b7e3c18361a124a"
+    },
+    {
+      "path": "font_model/green_7.jpg",
+      "sha256": "2abbebf18bc1e48f7549562b256a1068aeab53ee75032db8abb933954135caeb"
+    },
+    {
+      "path": "font_model/green_8.jpg",
+      "sha256": "44da09519990ddea45a811c8648f76cfe28b33c3fb55363f22a7a4c97ed96182"
+    },
+    {
+      "path": "font_model/green_9.jpg",
+      "sha256": "2bd2fe9b069f9b10fb0099a6af9590e605ec0f7ed9c3cf403464122c4820c737"
+    },
+    {
+      "path": "font_model/green_A.jpg",
+      "sha256": "4a3897c12d44500a9ca704a51c6061a0c1abec88c25fcfe35754a9a9300d25e4"
+    },
+    {
+      "path": "font_model/green_B.jpg",
+      "sha256": "f0175e6f30ce49239ed270cc1f04fc8865eb1b99c7ba978c8ab033434d562ae6"
+    },
+    {
+      "path": "font_model/green_C.jpg",
+      "sha256": "788243a2225dcb84ec98aa3c9f07b344d4bcb3df2974599777908bb2e2b88ac3"
+    },
+    {
+      "path": "font_model/green_D.jpg",
+      "sha256": "b9dbd17c0929461b7ccc7e19a3aad27d6b52d8fe20e2150759e6bb3f9f34656d"
+    },
+    {
+      "path": "font_model/green_E.jpg",
+      "sha256": "864fb2b19436d4a321a19b51bb7b59ae76fb120cf4b79bf584a9525e3b763c8d"
+    },
+    {
+      "path": "font_model/green_F.jpg",
+      "sha256": "00eb9f883956f0138b3483089631050d6c221322c094c77daeb2fc10d51189ac"
+    },
+    {
+      "path": "font_model/green_G.jpg",
+      "sha256": "8ec105aa37bb3acbd17eb1f15f860ed862ff051caa410c8eb2fb323ec49240cb"
+    },
+    {
+      "path": "font_model/green_H.jpg",
+      "sha256": "3e63645f5834d1fa89a09a7f2ad1b28a59132a644efe0252f203e4e83777f909"
+    },
+    {
+      "path": "font_model/green_J.jpg",
+      "sha256": "da8e6bc3ea726e84ace11a08ee7c7428629ee1cafea0aed87aca7c4a638ab975"
+    },
+    {
+      "path": "font_model/green_K.jpg",
+      "sha256": "f0f1972fe20a5e3ddfc1c9ecdcf42aa037754325587b19f4483dc592614ddd99"
+    },
+    {
+      "path": "font_model/green_L.jpg",
+      "sha256": "2107a09d9b18d03af476e37edc2aee1412529937fd0bfeabdb9aa2a43df8e77f"
+    },
+    {
+      "path": "font_model/green_M.jpg",
+      "sha256": "d7afc82f0ebe59a5b5e248096d94f4028d45db23bbed10bb59ff80fe051e1265"
+    },
+    {
+      "path": "font_model/green_N.jpg",
+      "sha256": "4281b4afa9ef102bdc038601f82f42db5da25f25d55a65b2a0a34a302f17f6fe"
+    },
+    {
+      "path": "font_model/green_P.jpg",
+      "sha256": "2c75731dcdf60b278c5d9faa97d365be94a9eb0cc5d9426f1b73bafb04a286f0"
+    },
+    {
+      "path": "font_model/green_Q.jpg",
+      "sha256": "75b14c148f340214ec005b5b1f3bc418ec31b549b4b66fc703eb84da34d1ae2a"
+    },
+    {
+      "path": "font_model/green_R.jpg",
+      "sha256": "ad401324d9c964ff5e8526dd8e6b76acd3e7d8371c371546b1c3d48ca6cc22c9"
+    },
+    {
+      "path": "font_model/green_S.jpg",
+      "sha256": "f440df8bb811ab49eda0b54b514c0468c604eed66989ba66e5065ae7b543ba14"
+    },
+    {
+      "path": "font_model/green_T.jpg",
+      "sha256": "c5ea972076736d43528c5f17bdc78ad7f3b6f1b065c03c6a312c2cf63349a462"
+    },
+    {
+      "path": "font_model/green_U.jpg",
+      "sha256": "08194ac1fa9fe389f484e53ed01879929c271b4cea9af61c7d73d3f91686345e"
+    },
+    {
+      "path": "font_model/green_V.jpg",
+      "sha256": "fed78a53cb703da88a240051c24a825e2000199a27c65b32985323c093d5be99"
+    },
+    {
+      "path": "font_model/green_W.jpg",
+      "sha256": "838ce7a644194d23ee08e5a618c722dd673c4b8e1a5cc33bd9b2815df79353e7"
+    },
+    {
+      "path": "font_model/green_X.jpg",
+      "sha256": "8b65fbae8a0e490fbadfebb9cb5aa0e61ba84211daf2a5dfbb900ad610fcab6f"
+    },
+    {
+      "path": "font_model/green_Y.jpg",
+      "sha256": "98c0f887684f60510f14743941e8c0da32468177213e38a5ad2c758494f05271"
+    },
+    {
+      "path": "font_model/green_Z.jpg",
+      "sha256": "b894439a15072bf74131adbb2627113df11caf921635bf9ebdf334fec76ceb48"
+    },
+    {
+      "path": "plate_model/blue_140.PNG",
+      "sha256": "e8ff12cddae98903280c5f86bbabd68d08d0b24fc4c68896467cae51b5f8bf35"
+    },
+    {
+      "path": "plate_model/green_car_140.PNG",
+      "sha256": "b3f1f5304b08e2b8ac018eb1915a7b54df7a1fba63ed08238c5f1c49ab7889f8"
+    },
+    {
+      "path": "plate_model/green_truck_140.PNG",
+      "sha256": "7c0a2c724a5ec4f74748292b0af36826c4e8011565e866a746b609a041891e4f"
+    }
+  ],
+  "sha256": "4c42de89fec1f0128a52ba7237e24ea968930e19490c31bf2c21892a85c2d45a"
+}

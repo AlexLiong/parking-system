@@ -1,0 +1,2 @@
+# 原生默认配置补修
+复现：frozen_entry未选择production，而默认config.yaml为demo=true；之前smoke显式设置PARKING_CONFIG只证明可选生产路径，未证明默认。需要在导入服务/preflight前为原生入口设置生产默认，尊重明确提供的配置，不改变源码run.py的课程演示默认。新smoke --default-config复制完整原生/资产到独立临时目录，删除继承的PARKING_CONFIG，真实启动可执行，断言demo403/overview401、环境密码登录和三样式识别。定向回归验证默认与显式覆盖，重新构建原生。若失败保存补丁并仅回退此补修，不交付失败候选。

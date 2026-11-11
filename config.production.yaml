@@ -1,0 +1,155 @@
+# =====================================================================
+# 停车场收费系统 —— 全局配置（所有可调阈值/计时/路径/费率缺省/默认布局）
+# 代码只从这里读配置；改行为优先改本文件而非改代码（可维护性/可移植性）。
+# 时间统一以 UTC 存储，按 server.timezone 业务时区显示（默认 Asia/Shanghai）。
+# =====================================================================
+
+server:
+  demo_mode: false         # 新库生成随机管理员凭据；关闭演示免登录
+  host: "127.0.0.1"        # 本地演示；局域网须显式指定监听地址
+  port: 8000
+  cors_origins: ["http://127.0.0.1:8000", "http://localhost:8000"]
+  jwt_secret: "change-me-in-production-0123456789abcdef"   # 首启自动替换为data/.jwt-secret；可用PARKING_JWT_SECRET覆盖
+  jwt_expire_minutes: 720
+  ws_v2: true                # 可回退到旧 WS 协议；旧客户端需不传 features=v2
+
+paths:
+  data_dir: "data"           # 相对项目根；运行时生成 parking.db / photos / reports
+  db_file: "data/parking.db"
+  photos_dir: "data/photos"
+  reports_dir: "data/reports"
+  plates_dataset: "datasets/demo-lpr"       # 3D/管理端演示图库（MIT 样式生成，非 PR-2 实拍）
+  web_admin: "web/admin"                  # 管理端静态资源
+  web_sim: "web/sim3d"                    # 3D 仿真端静态资源
+
+retention:
+  # 上传/相机截图/视频抽帧保留期（只清理 data/photos/{uploads,crops,camera}；
+  # 不触碰 datasets 演示源图、日志与 reports 证据）。生产默认同样保守。
+  enabled: true
+  max_age_days: 7
+  max_total_mb: 2048
+  keep_recent_files: 50
+  min_age_hours_for_capacity: 24
+  interval_hours: 6
+  run_on_startup: true
+
+lpr:
+  # 识别输入与 3D 建模解耦：识别只吃独立车牌图像（图库/上传）
+  conf_threshold: 0.85       # 整牌综合置信度阈值，低于则转人工确认(FR-1.6/RR-1.2)
+  char_conf_threshold: 0.45  # 单字符最低置信度
+  max_image_side: 1280       # 预处理长边上限
+  locate_topk: 3             # 定位失败时逐个尝试的候选数
+  disambig_gap: 0.15         # top1/top2 置信度差 < 该值且落入易混对 → 触发仲裁
+  backend: "auto"            # 兼容旧模板；demo-lpr/上传走本地 HyperLPR3 ONNX
+  onnx_model: "server/lpr/models/char_cnn.onnx"
+  template_dir: "server/lpr/models/templates"   # 内置字符模板（seed 时生成）
+  blue_size: [440, 140]      # 蓝牌校正后标准尺寸
+  green_size: [480, 140]     # 绿牌校正后标准尺寸
+  char_size: [32, 64]        # 归一化字符块尺寸（越大保留笔画细节越多，模板匹配判别力越强）
+  retry_before_manual: 3     # 连续识别失败 N 次转人工(FR-9.3)
+  manual_confirm_timeout: 60 # 人工确认超时(秒)
+  # ---- Idea A：真实照片字符分类器复核（与 config.yaml 一致；可关闭）----
+  real_char_verify: false   # Idea A 实测：249 张 EasyPR 真实字符模型严格复核会把自动通过降为 0，默认关闭；需要时改 true
+  real_char_model: "server/lpr/models/char_cnn_real.onnx"
+  real_char_templates: "server/lpr/models/real_char_templates"
+  real_char_knn: "server/lpr/models/real_char_knn.npz"
+  # ---- 统一识别管线（仿真 3D 相机截图 / 上传演示共用；HyperLPR3 为主）----
+  pipeline_variants: true
+  pipeline_max_variants: 6
+  sim_conf_threshold: 0.85
+
+access:
+  # 道闸状态机 / 跟车 / 防砸（§6）
+  barrier_open_sec: 1.5      # 抬杆动画时长（前端同步）
+  barrier_close_sec: 1.5     # 落杆动画时长
+  keep_open_sec: 3.0         # 保持开启计时(FR-4.2)，每车通过后重置
+  close_delay_sec: 1.0       # 杆区清空后延时落杆
+  min_follow_gap_m: 1.0      # 闸前最小跟车间距(§8)
+  barrier_ack_timeout_sec: 3.0   # 道闸指令无回执超时(FR-9.4)
+  barrier_retry: 1           # 超时重试次数
+  tick_interval_ms: 50       # 状态机定时器步长
+  exit_no_record_policy: "max_duration"  # 出场无记录: max_duration | manual | free (FR-3.6)
+  temp_max_hours: 24         # 无记录按临时车最长在场时长计费的默认小时数
+
+spaces:
+  total_default: 80
+  c_reserve: 0               # C 区新能源保留配额(默认关闭, FR-2.5)；>0 时蓝牌最多用到剩该数
+  space_width_m: 3.0         # 车位尺寸 3.0 x 6.0 m
+  space_depth_m: 6.0
+
+billing:
+  # 费率缺省值（管理员可在后台修改，改动生成新版本快照，不影响历史 FR-5.3）
+  free_minutes: 15
+  first_hour_price: 5.0
+  unit_minutes: 30           # 计费粒度：首小时后每 30 分钟一单位
+  unit_price: 2.0
+  daily_cap: 40.0            # 每自然日封顶
+  ne_discount: 0.9           # 绿牌新能源折扣（9 折），设为 1.0 关闭
+  round_up: true             # 不足一个计费单位是否进位
+
+report:
+  font_name: "STSong-Light"  # ReportLab 内置 CID 中文字体（无需捆绑字体文件，跨平台）
+  matplotlib_dpi: 130
+
+recovery:
+  ws_heartbeat_sec: 5        # WebSocket 心跳(FR-9.5)
+  camera_fail_streak: 3      # 连续图像源失败判定摄像头故障(FR-9.2)
+  barrier_safe_state: "keep_open"  # 断连时道闸锁定安全侧
+
+# 默认车位布局声明（声明式：只填 区+数量+类型，坐标由 LayoutGenerator 生成 §3.9）
+# seed_demo.py 首次初始化时按此生成；后台修改布局不影响本缺省。
+default_layout:
+  - { zone: "A", count: 20, kind: "normal" }
+  - { zone: "B", count: 20, kind: "normal" }
+  - { zone: "C", count: 20, kind: "ne_prefer" }   # C 区新能源优先
+  - { zone: "D", count: 20, kind: "normal" }
+
+# 布局 manifest（route-v2 单一事实源，审查报告 §8.5/§8.9.4）
+# 由 server/layout/manifest.py 加载/校验（版本/manifest_hash/节点边完整性），
+# 缺失或校验失败时后端回退旧版布局常量并告警。
+# 注：core/config.py 的 paths 段是严格 dataclass（本轮后端布局改造不改 core 文件），
+#     故 manifest 路径置于顶层；manifest.py 同时兼容环境变量 PARKING_LAYOUT_MANIFEST、
+#     paths.layout_manifest（待 core 扩展字段后启用）与 scene.layout_manifest。
+layout_manifest: "assets_3d/layout/lot_v2.json"
+
+# 场景几何（route-v2：以 assets_3d/layout/lot_v2.json manifest 为准；
+# 本段保留旧键 + 新增键，仅作启动一致性校验/离线回退，运行期 /api/layout 的
+# scene/gates 由 manifest 派生值覆盖。旧字段全部保留，前端可继续按旧键读取）
+scene:
+  # ── 旧字段（保留兼容；值已按 route-v2 更新）──
+  lot_x: 36.0                # 场地半宽（x_max）
+  top_y: 29.5                # 北墙
+  bot_y: -30.0               # 南墙
+  main_road_half: 3.0        # 旧语义：中央主路半宽（v2 中央为绿岛，保留兼容）
+  entry_gate_x: -3.5
+  exit_gate_x: 3.5
+  gate_y: -25.5              # 入口闸（v2 入口位置不变）
+  outer_road_y: -48.5        # 外场道南移 2.5 m
+  stop_line_entry_y: -25.8   # 入口停止线漆（paint = gate_y - 0.3）
+  stop_line_exit_y: -33.7    # 出口停止线漆（paint = gate_out_y + 0.3）
+  # ── route-v2 新增（manifest 派生）──
+  gate_out_y: -34.0          # 出口闸南移 8.5 m
+  stop_paint:
+    in: -25.8
+    out: -33.7
+  stop_entry_center_y: -28.4 # 入口车心停止点（最大车型）
+  stop_exit_center_y: -31.1  # 出口车心停止点
+  aisle_w: 6.5               # 场内支路宽（v2：5.0 → 6.5）
+  aisle_n: 19.5              # 北支路中心 y
+  aisle_s: -13.5             # 南支路中心 y
+  median_half: 1.75          # 中央隔离带半宽（3.5 m 全宽）
+  lane_n_eb: 17.875          # 北支路东行车道中心
+  lane_n_wb: 21.125          # 北支路西行车道中心
+  lane_s_eb: -15.125         # 南支路东行车道中心
+  lane_s_wb: -11.875         # 南支路西行车道中心
+  plaza:
+    n: { x: 0.0, y: 19.5, w: 12.0, h: 6.5 }    # 北分岔区（12×6.5）
+    s: { x: 0.0, y: -13.5, w: 12.0, h: 6.5 }   # 南分岔区
+  road_graph_version: 2
+
+logging:
+  level: "INFO"
+  dir: "data/logs"
+  max_bytes: 5242880
+  backup_count: 7
+

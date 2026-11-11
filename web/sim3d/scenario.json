@@ -1,0 +1,150 @@
+{
+  "name": "蓝牌与新能源全流程演示",
+  "seed": 20261020,
+  "description": "6辆可追溯验证集演示图；固定vid；跟随排队、同刻进出、按车缴费，最后空场故障注入与恢复。识别运行实际本地模型；不伪造放行或人工确认。演示图库不计入测试成绩。",
+  "steps": [
+    {
+      "t": 1,
+      "action": "spawn",
+      "vid": "E1",
+      "kind": "blue",
+      "plate": "湘N7D071",
+      "plate_image": "datasets/demo-lpr/blue-000-clean.png"
+    },
+    {
+      "t": 4,
+      "action": "spawn",
+      "vid": "E2",
+      "kind": "green",
+      "plate": "沪UD76840",
+      "plate_image": "datasets/demo-lpr/green_car-000-clean.png"
+    },
+    {
+      "t": 5,
+      "action": "safety_probe",
+      "gate": "in",
+      "timeout": 60
+    },
+    {
+      "t": 7,
+      "action": "spawn",
+      "vid": "E3",
+      "kind": "green",
+      "plate": "赣J95163F",
+      "plate_image": "datasets/demo-lpr/green_truck-000-clean.png"
+    },
+    {
+      "t": 100,
+      "action": "spawn",
+      "vid": "E4",
+      "kind": "blue",
+      "plate": "蒙E8CQVJ",
+      "plate_image": "datasets/demo-lpr/blue-001-clean.png"
+    },
+    {
+      "t": 100,
+      "action": "exit",
+      "vid": "E1",
+      "timeout": 240
+    },
+    {
+      "t": 110,
+      "action": "spawn",
+      "vid": "E5",
+      "kind": "green",
+      "plate": "皖JD49263",
+      "plate_image": "datasets/demo-lpr/green_car-001-clean.png"
+    },
+    {
+      "t": 110,
+      "action": "exit",
+      "vid": "E2",
+      "timeout": 240
+    },
+    {
+      "t": 120,
+      "action": "spawn",
+      "vid": "E6",
+      "kind": "green",
+      "plate": "鲁R98677F",
+      "plate_image": "datasets/demo-lpr/green_truck-001-clean.png"
+    },
+    {
+      "t": 120,
+      "action": "exit",
+      "vid": "E3",
+      "timeout": 240
+    },
+    {
+      "t": 125,
+      "action": "pay",
+      "vid": "E1",
+      "timeout": 240
+    },
+    {
+      "t": 135,
+      "action": "pay",
+      "vid": "E2",
+      "timeout": 240
+    },
+    {
+      "t": 145,
+      "action": "pay",
+      "vid": "E3",
+      "timeout": 240
+    },
+    {
+      "t": 280,
+      "action": "exit",
+      "vid": "E4",
+      "timeout": 240
+    },
+    {
+      "t": 290,
+      "action": "exit",
+      "vid": "E5",
+      "timeout": 240
+    },
+    {
+      "t": 300,
+      "action": "exit",
+      "vid": "E6",
+      "timeout": 240
+    },
+    {
+      "t": 305,
+      "action": "pay",
+      "vid": "E4",
+      "timeout": 240
+    },
+    {
+      "t": 315,
+      "action": "pay",
+      "vid": "E5",
+      "timeout": 240
+    },
+    {
+      "t": 325,
+      "action": "pay",
+      "vid": "E6",
+      "timeout": 240
+    },
+    {
+      "t": 440,
+      "action": "inject",
+      "kind": "barrier",
+      "gate": "out",
+      "mode": "ack_timeout"
+    },
+    {
+      "t": 448,
+      "action": "recover",
+      "kind": "barrier",
+      "gate": "out"
+    },
+    {
+      "t": 460,
+      "action": "wait"
+    }
+  ]
+}

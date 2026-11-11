@@ -1,0 +1,23 @@
+const {chromium}=require('playwright'),fs=require('fs'),assert=require('assert/strict');
+const base=process.env.PARKING_URL||'http://127.0.0.1:9632',out=process.env.EVIDENCE_DIR||'../_qa_audit/repair/A3-traffic/evidence';fs.mkdirSync(out,{recursive:true});
+(async()=>{const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH,args:(process.env.E2E_GPU?['--enable-gpu','--ignore-gpu-blocklist','--use-angle=d3d11']:['--enable-unsafe-swiftshader','--use-angle=swiftshader'])});try{
+ const page=await browser.newPage({viewport:{width:1280,height:800}}),errors=[];page.on('pageerror',e=>errors.push(String(e)));
+ await page.goto(base+'/sim/');await page.waitForFunction(()=>window.__SIM__?.simApi?.rt?.sessionId);
+ await page.evaluate(()=>__SIM__.simApi.resetDemo());await page.evaluate(()=>__SIM__.controls.setPaused(true));
+ await page.evaluate(()=>{window.trafficPending=Array.from({length:8},(_,i)=>__SIM__.scheduler.spawnEntry({vehicleId:'queue-'+i,kind:i%2?'green':'blue'}));});
+ await page.waitForFunction(()=>__SIM__.scheduler.vehicles.size>0);
+ await page.waitForTimeout(2000);
+ const before=await page.evaluate(()=>({runtime:__SIM__.scheduler.runtimeSnapshot(),scheduler:__SIM__.scheduler.schedulerSnapshot(),counts:__SIM__.scheduler.counts(),edge:__SIM__.scheduler.outerSouthZ}));
+ assert.equal(before.counts.total+before.counts.pendingSpawn,8);assert.ok(before.counts.pendingSpawn>0);
+ for(const v of before.runtime)assert.ok(v.pose.z+({van:5.2,suv:4.8,hatch:4.2,sedan:4.6}[v.model?.includes('van')?'van':'sedan']||4.6)/2<=before.edge+.01);
+ await page.screenshot({path:out+'/queue-eight.png'});
+ await page.evaluate(()=>__SIM__.simApi.reportRuntime(__SIM__.scheduler.runtimeSnapshot(),__SIM__.scheduler.schedulerSnapshot()));
+ await page.reload();await page.waitForFunction(()=>window.__SIM__?.simApi?.rt?.sessionId&&__SIM__.scheduler.counts().total+__SIM__.scheduler.counts().pendingSpawn===8);
+ const after=await page.evaluate(()=>({scheduler:__SIM__.scheduler.schedulerSnapshot(),counts:__SIM__.scheduler.counts()}));
+ assert.deepEqual(after.scheduler,before.scheduler);assert.deepEqual(after.counts,before.counts);
+ const observer=await browser.newPage();observer.setDefaultNavigationTimeout(90000);observer.on('pageerror',e=>{errors.push(String(e));console.error('observer page error',e);});observer.on('requestfailed',r=>console.error('observer request failed',r.url(),r.failure()));observer.on('console',m=>{if(m.type()==='error')console.error('observer console',m.text());});await observer.goto(base+'/sim/');await observer.waitForFunction(()=>window.__SIM__?.simApi?.rt?.sessionId,null,{timeout:90000});
+ const denied=await observer.evaluate(async()=>{try{await __SIM__.scheduler.spawnEntry();return false;}catch(e){return String(e).includes('dispatcher_busy');}});assert.equal(denied,true);
+ await page.screenshot({path:out+'/queue-restored.png'});assert.deepEqual(errors,[]);
+ fs.writeFileSync(out+'/browser.json',JSON.stringify({before,after,secondDriverRejected:denied,errors},null,2));console.log(JSON.stringify({eightRequests:true,refreshRestored:true,secondDriverRejected:denied,errors}));
+ await page.evaluate(()=>__SIM__.simApi.resetDemo());
+ }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

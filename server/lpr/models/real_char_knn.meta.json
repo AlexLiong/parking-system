@@ -1,0 +1,133 @@
+{
+  "format": "real-char-knn-v1",
+  "char_size": [
+    32,
+    64
+  ],
+  "k": 1,
+  "source": "real_photo_characters_only",
+  "counts": {
+    "hanzi": {
+      "京": 52,
+      "津": 33,
+      "冀": 45,
+      "晋": 16,
+      "蒙": 14,
+      "辽": 33,
+      "吉": 3,
+      "黑": 25,
+      "沪": 37,
+      "苏": 87,
+      "浙": 86,
+      "皖": 63,
+      "闽": 26,
+      "赣": 13,
+      "鲁": 60,
+      "豫": 43,
+      "鄂": 17,
+      "湘": 48,
+      "粤": 152,
+      "桂": 8,
+      "琼": 12,
+      "渝": 10,
+      "川": 76,
+      "贵": 4,
+      "云": 24,
+      "藏": 2,
+      "陕": 16,
+      "甘": 4,
+      "青": 8,
+      "宁": 4,
+      "新": 9
+    },
+    "letter": {
+      "A": 415,
+      "B": 151,
+      "C": 41,
+      "D": 52,
+      "E": 57,
+      "F": 28,
+      "G": 36,
+      "H": 24,
+      "J": 37,
+      "K": 32,
+      "L": 21,
+      "M": 19,
+      "N": 18,
+      "P": 19,
+      "Q": 19,
+      "R": 17,
+      "S": 15,
+      "T": 9,
+      "U": 5,
+      "V": 6,
+      "X": 3,
+      "Y": 4,
+      "Z": 2
+    },
+    "alnum": {
+      "0": 533,
+      "1": 370,
+      "2": 369,
+      "3": 257,
+      "4": 245,
+      "5": 389,
+      "6": 369,
+      "7": 322,
+      "8": 779,
+      "9": 460,
+      "A": 74,
+      "B": 104,
+      "C": 45,
+      "D": 48,
+      "E": 38,
+      "F": 39,
+      "G": 39,
+      "H": 41,
+      "J": 43,
+      "K": 40,
+      "L": 43,
+      "M": 33,
+      "N": 37,
+      "P": 39,
+      "Q": 41,
+      "R": 35,
+      "S": 70,
+      "T": 53,
+      "U": 26,
+      "V": 41,
+      "W": 34,
+      "X": 27,
+      "Y": 33,
+      "Z": 34
+    }
+  },
+  "bank_size": 7210,
+  "provenance": {
+    "easypr": {
+      "source": "https://github.com/liuruoze/EasyPR",
+      "source_commit": "a0a9f3c3f612e7c8d9046bd9c5770249cfb86850",
+      "license": "GDSL-0.1"
+    },
+    "treeandgrass": {
+      "source": "https://github.com/treeandgrass/License-plate-data-set",
+      "source_commit": "dec642ea4471b8f22347c4ee13a52fb1a212109f",
+      "repository_license": "MIT",
+      "weak_label_rule": "filename_label == HyperLPR3 detection, conf>=0.95, grammar valid; train_aux only"
+    }
+  },
+  "calibration": {
+    "hanzi": [
+      0.4315,
+      0.9035
+    ],
+    "letter": [
+      0.4047,
+      0.9447
+    ],
+    "alnum": [
+      0.5275,
+      0.9544
+    ]
+  }
+}

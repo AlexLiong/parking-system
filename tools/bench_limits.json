@@ -1,0 +1,51 @@
+{
+  "_doc": [
+    "P1-13 基准门禁显式配置。bench_stats.py 的通过条件为 max(day,month,year,search) <= limit_seconds。",
+    "默认保持 2.0s（不静默放宽）。平台/慢机需要调整时，必须显式改这里或设置 PARKING_BENCH_MAX_SECONDS，",
+    "并在 _qa_audit/repair_tasks_20261023/P1-13/REPORT.md 记录环境与校准样本；功能断言（10万行计数/营收/分页）始终不变。"
+  ],
+  "default_seconds": 2.0,
+  "platforms": {},
+  "calibration": {
+    "Windows 11 (10.0.26220) / Python 3.13.0 / venv": {
+      "command": ".venv\\Scripts\\python.exe tools\\bench_stats.py",
+      "before_optimization_year_seconds": [
+        2.075,
+        1.984,
+        1.79
+      ],
+      "before_optimization_note": "year 在 2s 门禁附近抖动（1.79~2.08），ci.py --bench 会随机失败",
+      "after_optimization_year_seconds": [
+        1.1152,
+        1.2175,
+        1.3148,
+        1.3443,
+        1.3512,
+        1.3572,
+        1.3681,
+        1.4718,
+        1.4752,
+        1.4943,
+        1.5083,
+        1.5741,
+        1.7292,
+        1.0073
+      ],
+      "after_optimization_max_year_seconds": 1.7292,
+      "limit_seconds": 2.0,
+      "limit_source": "config:default（未降低阈值；max 观测 1.729s，余量约 0.27s）",
+      "slower_host_guidance": "若目标机 year 稳定 >2s，可先确认没有杀毒/索引服务干扰；仍需放宽时显式设置 PARKING_BENCH_MAX_SECONDS 并记录 3 次以上样本与本文件同结构的校准记录。",
+      "after_optimization_note": "14 次样本（含最终 ci.py --bench year=1.1152、bench_stats 1.0073）；全部小于 2.0，最差 1.7292；门禁未降低"
+    },
+    "macOS arm64 baseline (历史证据)": {
+      "command": ".venv/bin/python tools/ci.py --bench",
+      "year_seconds": 1.534,
+      "day_month_search_seconds": [
+        0.195,
+        0.296,
+        0.0247
+      ],
+      "limit_source": "config:default 2.0（历史通过）"
+    }
+  }
+}

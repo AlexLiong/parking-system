@@ -1,0 +1,280 @@
+{
+  "version": 2,
+  "source": "https://github.com/Pengfei8324/chinese_license_plate_generator",
+  "source_commit": "df4757f99e63d7180a59d6c2633f466a339b500b",
+  "license": "MIT (chinese_license_plate_generator)",
+  "generated_from": "parking-system/datasets/demo-lpr/manifest.json",
+  "note": "车牌贴图直接由外部 MIT plate_model/font_model 生成；Plate_F/Plate_R 使用该贴图",
+  "plates": {
+    "粤F4K1CZ": {
+      "file": "plates/blue-000-clean.png",
+      "color": "blue",
+      "style": "blue",
+      "plate_type": "blue",
+      "vehicle_kind": "sedan",
+      "source_sample": "blue-000-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\blue-000-clean.png",
+      "source_sha256": "55941d673e2800a216bb445727cfe520df094dc25e211b3a22f4bb68ceaf92c2",
+      "crop_sha256": "fc9b8f6045368211fda827f2de0e22595694ea559840d80167172ce423f229d1",
+      "crop_size": [
+        440,
+        140
+      ]
+    },
+    "甘N35MYY": {
+      "file": "plates/blue-001-clean.png",
+      "color": "blue",
+      "style": "blue",
+      "plate_type": "blue",
+      "vehicle_kind": "sedan",
+      "source_sample": "blue-001-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\blue-001-clean.png",
+      "source_sha256": "1e0b0e2a067c86038fb4a78df15e2447364b66ede0260544f7510fd64f00b993",
+      "crop_sha256": "a673cf40973ed35973238558c3ae21c1ad9cbaeaa78632a49462526ae5cf8021",
+      "crop_size": [
+        440,
+        140
+      ]
+    },
+    "桂RNRYAB": {
+      "file": "plates/blue-002-clean.png",
+      "color": "blue",
+      "style": "blue",
+      "plate_type": "blue",
+      "vehicle_kind": "sedan",
+      "source_sample": "blue-002-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\blue-002-clean.png",
+      "source_sha256": "d6b26adf4e28859a0cf6f144f8174024e0b3f1ea38ce7824186ef56c2f0d907e",
+      "crop_sha256": "86e04979e25bf23fe31735d24289e4f9a917bcda3777e0cb07b7cffedf800a8f",
+      "crop_size": [
+        440,
+        140
+      ]
+    },
+    "豫PXHGPM": {
+      "file": "plates/blue-003-clean.png",
+      "color": "blue",
+      "style": "blue",
+      "plate_type": "blue",
+      "vehicle_kind": "sedan",
+      "source_sample": "blue-003-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\blue-003-clean.png",
+      "source_sha256": "aec64812a729dd34fa66f5ad30d0b7847ab772e1b0bd7c35587e682c314f6906",
+      "crop_sha256": "c84d7b417c828f52f962a0347005c4480b36b0d82221a17085eec128285211b3",
+      "crop_size": [
+        440,
+        140
+      ]
+    },
+    "苏B2S39K": {
+      "file": "plates/blue-004-clean.png",
+      "color": "blue",
+      "style": "blue",
+      "plate_type": "blue",
+      "vehicle_kind": "sedan",
+      "source_sample": "blue-004-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\blue-004-clean.png",
+      "source_sha256": "822359780cadf09610679d6388892b2f566c60256f95d112779e34b2872975cb",
+      "crop_sha256": "ef9579dca4469dfaba8fab7d9f1a2b3fe85eb1d415a69de45dfed9644304327b",
+      "crop_size": [
+        440,
+        140
+      ]
+    },
+    "贵JD8H5PF": {
+      "file": "plates/green_car-000-clean.png",
+      "color": "green",
+      "style": "green_car",
+      "plate_type": "green",
+      "vehicle_kind": "hatch",
+      "source_sample": "green-005-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\green_car-000-clean.png",
+      "source_sha256": "29b839f0a38c025485c1446bf928583b80ca72ca842329e2b7dcabdc2ac9a4dd",
+      "crop_sha256": "756eda62e3c432edbfd5fb74eb60adaca8c83261df2e73a1558b6f83dff79953",
+      "crop_size": [
+        480,
+        140
+      ]
+    },
+    "渝GDKLV32": {
+      "file": "plates/green_car-001-clean.png",
+      "color": "green",
+      "style": "green_car",
+      "plate_type": "green",
+      "vehicle_kind": "hatch",
+      "source_sample": "green-006-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\green_car-001-clean.png",
+      "source_sha256": "94d54c01e2b6cc989fb9dac2763f748facefcfd16b900d337158e7911949a949",
+      "crop_sha256": "83243da334f48aa1e85007c76470f11ea1f73780f4565d100cea9503ae90b909",
+      "crop_size": [
+        480,
+        140
+      ]
+    },
+    "闽DDXX73X": {
+      "file": "plates/green_car-002-clean.png",
+      "color": "green",
+      "style": "green_car",
+      "plate_type": "green",
+      "vehicle_kind": "hatch",
+      "source_sample": "green-007-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\green_car-002-clean.png",
+      "source_sha256": "9ec261a939c7b96218b3a3b0b82b6d9b427675a52c3b43d35b699bb03cf38897",
+      "crop_sha256": "146729d269b69eeb7ff2821e3cd17a876ce24882fe2444bc5be085ad60615295",
+      "crop_size": [
+        480,
+        140
+      ]
+    },
+    "辽FD03Z0S": {
+      "file": "plates/green_car-003-clean.png",
+      "color": "green",
+      "style": "green_car",
+      "plate_type": "green",
+      "vehicle_kind": "hatch",
+      "source_sample": "green-008-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\green_car-003-clean.png",
+      "source_sha256": "a2a091253d9466c031352fef16edd79770aabead2d42b973b51cfca7d66db055",
+      "crop_sha256": "8f696838e49691f19acf65876f0a67223a682d4664e6a0c46e9a5827539ff022",
+      "crop_size": [
+        480,
+        140
+      ]
+    },
+    "冀EDA3VZB": {
+      "file": "plates/green_car-004-clean.png",
+      "color": "green",
+      "style": "green_car",
+      "plate_type": "green",
+      "vehicle_kind": "hatch",
+      "source_sample": "green-009-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\green_car-004-clean.png",
+      "source_sha256": "2b59256812c4bccb061972326e26783560c39d8ce3687195fc58ec51079ab359",
+      "crop_sha256": "7b68949d669c43a99e4271ea62f70e68f1a3d266c2b6d3030dbb8b56209209bb",
+      "crop_size": [
+        480,
+        140
+      ]
+    },
+    "鄂ABWTXHF": {
+      "file": "plates/green_large-000-clean.png",
+      "color": "green",
+      "style": "green_large",
+      "plate_type": "green_large",
+      "vehicle_kind": "van",
+      "source_sample": "green_large-010-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\green_large-000-clean.png",
+      "source_sha256": "4ddb0be3d6d045b9bbbba038c436e758d0e339a10d5594b67faa1b8714ed0a46",
+      "crop_sha256": "ff614871d9bcea2a5f789cad8b812e203e57d150eb6706bd8200773f97076605",
+      "crop_size": [
+        480,
+        140
+      ]
+    },
+    "琼BKBF39F": {
+      "file": "plates/green_large-001-clean.png",
+      "color": "green",
+      "style": "green_large",
+      "plate_type": "green_large",
+      "vehicle_kind": "van",
+      "source_sample": "green_large-011-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\green_large-001-clean.png",
+      "source_sha256": "c3b0823b9495f87435be56137d8ea220f08f49315a0d0e6ee07403f17a9e5cea",
+      "crop_sha256": "caef7b48700b01878b8b5f7bd89723f34d4928f0a64f55b43e2dffa0c528bf0d",
+      "crop_size": [
+        480,
+        140
+      ]
+    },
+    "贵ABYWFRF": {
+      "file": "plates/green_large-002-clean.png",
+      "color": "green",
+      "style": "green_large",
+      "plate_type": "green_large",
+      "vehicle_kind": "van",
+      "source_sample": "green_large-012-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\green_large-002-clean.png",
+      "source_sha256": "c68da3c6081218e5a2705f58e4c34608d655be6fbdb2738a12028af8c9198a9e",
+      "crop_sha256": "16dbdbe797bd46573b295be12e17fe575a7d00ad85482b82b2596803453eab80",
+      "crop_size": [
+        480,
+        140
+      ]
+    },
+    "鄂JQ8PGQF": {
+      "file": "plates/green_large-003-clean.png",
+      "color": "green",
+      "style": "green_large",
+      "plate_type": "green_large",
+      "vehicle_kind": "van",
+      "source_sample": "green_large-013-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\green_large-003-clean.png",
+      "source_sha256": "b146d529b378a777b6fa1adb531d31120526c60ae9bacbf722d990318c1ccd91",
+      "crop_sha256": "b545827a7d90606f5d37ab10221efc78c82c8b0bba0db81e19768c49da75fbbd",
+      "crop_size": [
+        480,
+        140
+      ]
+    },
+    "桂ES6EKB": {
+      "file": "plates/yellow-000-clean.png",
+      "color": "yellow",
+      "style": "yellow",
+      "plate_type": "yellow",
+      "vehicle_kind": "van",
+      "source_sample": "yellow-014-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\yellow-000-clean.png",
+      "source_sha256": "45f026de56f0d7b607a27a0bf85b90ffd875a81cffd74bd2b605169ce40e685e",
+      "crop_sha256": "d92704c20bc408924a2479c02690c6f1ddb8dc94a48b3bbdbce6f3e2390af734",
+      "crop_size": [
+        440,
+        140
+      ]
+    },
+    "渝B39USG": {
+      "file": "plates/yellow-001-clean.png",
+      "color": "yellow",
+      "style": "yellow",
+      "plate_type": "yellow",
+      "vehicle_kind": "van",
+      "source_sample": "yellow-015-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\yellow-001-clean.png",
+      "source_sha256": "8666a92117453c87aa71e21b850bcb0b27fcdc0a3cf12be17d88fff7d6113905",
+      "crop_sha256": "2d48198481dbc3cef63bfb9903f9ec9533e9c5adfdc7e62f6d1d116afb52377c",
+      "crop_size": [
+        440,
+        140
+      ]
+    },
+    "苏N8D8ZQ": {
+      "file": "plates/yellow-002-clean.png",
+      "color": "yellow",
+      "style": "yellow",
+      "plate_type": "yellow",
+      "vehicle_kind": "van",
+      "source_sample": "yellow-016-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\yellow-002-clean.png",
+      "source_sha256": "b9d69c5c497f478b4de6b162f88a00f38dbfcd35acc3d5e7eb91668a3900fc33",
+      "crop_sha256": "d4278b69e575245dd434cab1d2f47a27a715aa9bb5ca8d80eb71b94542e24a82",
+      "crop_size": [
+        440,
+        140
+      ]
+    },
+    "贵BBYWFR": {
+      "file": "plates/yellow-003-clean.png",
+      "color": "yellow",
+      "style": "yellow",
+      "plate_type": "yellow",
+      "vehicle_kind": "van",
+      "source_sample": "yellow-017-clean",
+      "source_image": "E:\\seniorp2\\parking-system\\datasets\\demo-lpr\\yellow-003-clean.png",
+      "source_sha256": "6bf01cef7575bfd695f319f2547750a58538155a3ec97bd8a4ce7974e9cd2a9c",
+      "crop_sha256": "3a90af9a682248d85634da57d6ddc709f4f9a3844e97c582196bc700a92f2c54",
+      "crop_size": [
+        440,
+        140
+      ]
+    }
+  }
+}

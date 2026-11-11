@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>停车场 3D 仿真端</title>
+  <link rel="icon" type="image/svg+xml" href="/common/favicon.svg" />
+  <link rel="stylesheet" href="./styles.css" />
+  <!-- 无构建：importmap 把裸模块名映射到本地 vendored three.js r169（完全离线） -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three.module.js",
+      "three/addons/": "./vendor/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene"></canvas>
+
+    <!-- 顶部状态条 -->
+    <header id="topbar">
+      <div class="brand">🅿️ 停车场 3D 仿真</div>
+      <div id="conn" class="pill pill-off">连接中…</div>
+      <div id="clock" class="pill">--:--:--</div>
+    </header>
+
+    <!-- 余位信息屏（HUD） -->
+    <aside id="freeboard" class="panel">
+      <div class="panel-title">余位</div>
+      <div id="free-total" class="free-total">--</div>
+      <div id="free-zones" class="free-zones"></div>
+      <div id="recommend" class="recommend">推荐：--</div>
+    </aside>
+
+    <!-- 事件日志 / 识别 / 费用弹牌 -->
+    <aside id="hud" class="panel">
+      <div class="panel-title">实时事件</div>
+      <div id="popups"></div>
+      <div id="events" class="events"></div>
+    </aside>
+
+    <!-- 剧本进度：独立可拖动面板 -->
+    <aside id="scenario-progress" class="panel scenario-progress" hidden>
+      <div class="sp-title-row panel-title"><span id="scn-name">剧本</span><span id="scn-state">未播放</span></div>
+      <div id="scn-desc" class="sp-desc"></div>
+      <div class="sp-bar"><i id="scn-bar"></i></div>
+      <div class="sp-meta"><span id="scn-time">0.0s / 0.0s</span><span id="scn-count">已入场 0 / 已出场 0 / 总 0</span></div>
+      <div id="scn-next" class="sp-next">
+        <div id="scn-next-event" class="sp-next-line">下一事件：—</div>
+        <div id="scn-next-forecast" class="sp-next-line sp-next-forecast">预计出场/缴费：—</div>
+      </div>
+    </aside>
+
+    <!-- 识别输入：本次识别实际使用的图片 -->
+    <aside id="recognition-input" class="panel" hidden>
+      <div class="panel-title">识别输入</div>
+      <div class="recog-head">
+        <span id="rec-input-gate" class="recog-badge">—</span>
+        <span id="rec-input-source" class="recog-source">—</span>
+      </div>
+      <img id="rec-input-img" alt="本次识别输入图片" />
+      <img id="rec-input-crop" alt="识别的车牌裁剪图" hidden />
+      <div id="rec-input-meta" class="recog-meta">尚未收到识别结果</div>
+    </aside>
+
+    <!-- 演示控制面板 -->
+    <section id="control" class="panel">
+      <div class="panel-title">演示控制</div>
+      <div class="ctl-row">
+        <button id="btn-play" class="btn primary">▶ 播放剧本</button>
+        <button id="btn-pause" class="btn">⏸ 暂停</button>
+        <button id="btn-reset" class="btn">⟲ 重置</button>
+      </div>
+      <div class="ctl-row">
+        <label>速度</label>
+        <input id="speed" type="range" min="0.25" max="10" step="0.25" value="1" />
+        <span id="speed-val">1.0×</span>
+      </div>
+      <div class="ctl-row">
+        <label>视角</label>
+        <select id="camera-preset">
+          <option value="overview">全局俯视</option>
+          <option value="entry">入口特写</option>
+          <option value="exit">出口特写</option>
+          <option value="lprIn">入口相机</option>
+          <option value="lprOut">出口相机</option>
+          <option value="follow">跟随车辆</option>
+          <option value="free">自由视角</option>
+        </select>
+      </div>
+      <div class="ctl-row">
+        <label>跟随车辆</label>
+        <select id="follow-vehicle">
+          <option value="auto">自动</option>
+        </select>
+      </div>
+      <div class="ctl-row">
+        <label>相机视角</label>
+        <button id="btn-cam-overview" class="btn">全景</button>
+        <button id="btn-cam-lpr-in" class="btn">入口相机</button>
+        <button id="btn-cam-lpr-out" class="btn">出口相机</button>
+      </div>
+      <div class="ctl-row">
+        <button id="btn-open-dispatch" class="btn primary">＋ 手动派车</button>
+      </div>
+      <div class="ctl-row">
+        <button id="btn-cam-fault" class="btn warn">入口摄像头故障</button>
+        <button id="btn-cam-recover" class="btn ok">入口恢复</button>
+        <button id="btn-cam-fault-out" class="btn warn">出口摄像头故障</button>
+        <button id="btn-cam-recover-out" class="btn ok">出口恢复</button>
+      </div>
+      <div class="ctl-row small">
+        <span id="sim-stat">车辆 0 · 在场 0</span>
+      </div>
+    </section>
+
+    <!-- 手动派车独立 messagebox：控制面板只保留入口按钮 -->
+    <div id="manual-modal" class="modal-backdrop" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="manual-modal-title">
+        <div class="modal-title">
+          <span id="manual-modal-title">手动派车</span>
+          <button id="btn-close-dispatch" class="modal-close" type="button" aria-label="关闭">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-row">
+            <label for="manual-plate">车牌</label>
+            <input id="manual-plate" class="plate-input" type="text" maxlength="8" inputmode="text"
+                   autocomplete="off" spellcheck="false" placeholder="7/8 位车牌" aria-label="车牌（7/8 位）" />
+          </div>
+          <div class="modal-row">
+            <label for="manual-type">类型</label>
+            <select id="manual-type" aria-label="车牌类型">
+              <option value="blue">蓝牌普通</option>
+              <option value="green">小型新能源</option>
+              <option value="green_large">大型新能源</option>
+              <option value="yellow">黄牌大型</option>
+            </select>
+          </div>
+          <div class="modal-row">
+            <label for="manual-duration">停车时长</label>
+            <input id="manual-duration" class="duration-input" type="number" min="1" step="1" value="5"
+                   aria-label="停车时长" />
+            <select id="manual-duration-unit" aria-label="停车时长单位">
+              <option value="min">分钟</option>
+              <option value="sec">仿真秒</option>
+            </select>
+          </div>
+          <div id="manual-status" class="manual-status" role="status" aria-live="polite"></div>
+          <div class="modal-actions">
+            <button id="btn-cancel-dispatch" class="btn" type="button">取消</button>
+            <button id="btn-dispatch" class="btn primary" type="button">确认派车</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="load-error" role="alert" hidden><span></span><button id="btn-retry-load" class="btn primary">重试加载</button></div>
+    <div id="loading"><div class="spinner"></div><div>加载 3D 场景与布局…</div></div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
+

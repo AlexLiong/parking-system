@@ -1,0 +1,260 @@
+{
+  "source_commit": "df4757f99e63d7180a59d6c2633f466a339b500b",
+  "source": "chinese_license_plate_generator",
+  "characters": "京津冀晋蒙辽吉黑沪苏浙皖闽赣鲁豫鄂湘粤桂琼渝川贵云藏陕甘青宁新",
+  "styles": [
+    "140",
+    "green"
+  ],
+  "sources": [
+    {
+      "file": "140_京.jpg",
+      "sha256": "634b9fe0155c1c23c341f6b73df8e816dc8ab4df9abda0d09a37cee701122356"
+    },
+    {
+      "file": "140_津.jpg",
+      "sha256": "0743a44655cf18561a15005ac59b9378353e587bf0199ecc52ddf3c466f3418d"
+    },
+    {
+      "file": "140_冀.jpg",
+      "sha256": "e0304c2b88f646d7bd4e3b8b0a266a11971b0454921a9b7553625774bba9e9e8"
+    },
+    {
+      "file": "140_晋.jpg",
+      "sha256": "36280d5281ad820baac840ef6ccece368a907d5974d29b1a432fb48aaeb22711"
+    },
+    {
+      "file": "140_蒙.jpg",
+      "sha256": "39c4beb82a7b4a6736af7f78265c4951b4643bfbdf914195b9b393a6be6cc506"
+    },
+    {
+      "file": "140_辽.jpg",
+      "sha256": "08930b3492ea33b79d51fb8f73b31ddd4664539ef6fbd58157200d3455a607fc"
+    },
+    {
+      "file": "140_吉.jpg",
+      "sha256": "a2c930961577c9055e421b2a6455a56fe33a7adffff0435ef243a50d8f1fee21"
+    },
+    {
+      "file": "140_黑.jpg",
+      "sha256": "91cb50e0ac18136abba4bbb94c15db7a574a1f61f6f033d87ef8b0ba9b9a2cb9"
+    },
+    {
+      "file": "140_沪.jpg",
+      "sha256": "d6ab0bfe3e6eeb5f3789213df39d3ab150537b8225305b348c1f169b126571bf"
+    },
+    {
+      "file": "140_苏.jpg",
+      "sha256": "df4fb456f0f7ceda72b9c12dcfd44cb83105549da3e9a4ac3db35b09ee829ed8"
+    },
+    {
+      "file": "140_浙.jpg",
+      "sha256": "e1dad198c52db96c2ed4a258e31960d4d7ec9e62ae77204b22d35563a0cd582a"
+    },
+    {
+      "file": "140_皖.jpg",
+      "sha256": "1c988fd7061a859bf62344d92fd6c7661f38b8311e1a83d481140aae9ab1b0a1"
+    },
+    {
+      "file": "140_闽.jpg",
+      "sha256": "dd3c062c3acdeb4f7a9b605cd3c05691e042d41667b57fd16640cf40f79980e7"
+    },
+    {
+      "file": "140_赣.jpg",
+      "sha256": "aca86e2276bd77525bee80af5876b3c5b53b26c8c589b741f926cf62823f2432"
+    },
+    {
+      "file": "140_鲁.jpg",
+      "sha256": "b65bf8f2d0da820e96442aaf30d7dc21d30f5286225c20bd607fac7e20479bb4"
+    },
+    {
+      "file": "140_豫.jpg",
+      "sha256": "6cf788d1982c3d725467bd8f3d1a653e5caf49250cd81b0569eefbbbc539dcb9"
+    },
+    {
+      "file": "140_鄂.jpg",
+      "sha256": "dd4fdf9932af9f70c384766770d2dca062a01a083df18d216e4a74c709a184b3"
+    },
+    {
+      "file": "140_湘.jpg",
+      "sha256": "f2bc2cefe3d9a5910ab11b7a610528f0e755eb0efef119f40d34e4f1bbe5e020"
+    },
+    {
+      "file": "140_粤.jpg",
+      "sha256": "5a17bf5bf7250002dcda087ec49df8ddffb154b8b65f6f0c1cc24b664634f40e"
+    },
+    {
+      "file": "140_桂.jpg",
+      "sha256": "25c8d05d4354aa6be3f1109f2948fb16422ade56754ee22eb56ea87f6fe5fd64"
+    },
+    {
+      "file": "140_琼.jpg",
+      "sha256": "03fd1e1de8ccdbc1fe7e6a85e933e7d582df11c4c2600d064098f8c0291e8da5"
+    },
+    {
+      "file": "140_渝.jpg",
+      "sha256": "e3d93e7af28470727cb286ca5fab15128f67d95091ca620d211f5d66a6470afe"
+    },
+    {
+      "file": "140_川.jpg",
+      "sha256": "0220f1674ce614b3728014d7357dec0dd7f5ecc0ee8d7c9a4358646555c3e06c"
+    },
+    {
+      "file": "140_贵.jpg",
+      "sha256": "38cfb166c29188258bb013f738f3879c73a20be8992dff62d0a41aced03e1984"
+    },
+    {
+      "file": "140_云.jpg",
+      "sha256": "d6de0016dd097bc3ba9eacc507a2af672b1946bf59b547b67ca05be90cd8bb1b"
+    },
+    {
+      "file": "140_藏.jpg",
+      "sha256": "ee275814cd5e5ec3024ade6139769707b68744da6c72c7918a9bd5ce5f6daae5"
+    },
+    {
+      "file": "140_陕.jpg",
+      "sha256": "58aba087eceba9b79bb120debb5253c3978c699ea4327d38d7648b48253175ad"
+    },
+    {
+      "file": "140_甘.jpg",
+      "sha256": "60d93b5f1eb1d7109101f89fcac771ad7ee646f2e98432b5a0059d4c8003720c"
+    },
+    {
+      "file": "140_青.jpg",
+      "sha256": "1ea4ef7924f8fd809f0ab64a055bbf685441964fdd87e28095183552fcea14ec"
+    },
+    {
+      "file": "140_宁.jpg",
+      "sha256": "796b92c14668d39520d4987733c2146afaf857611e006f2af8446f23bcabad96"
+    },
+    {
+      "file": "140_新.jpg",
+      "sha256": "ad3569ebc300e868e11536061ab4f6b858b7830ccd1fd7f601598d1a206a296b"
+    },
+    {
+      "file": "green_京.jpg",
+      "sha256": "ddaa2e703df747b71d0e9e5bfb6db14ff705ae3e57d347bc512ea44e39645b3e"
+    },
+    {
+      "file": "green_津.jpg",
+      "sha256": "6dc20257e99dba6a2db5b93dc0f61d3cadf471ac92a2ca8824bdc9f93238584e"
+    },
+    {
+      "file": "green_冀.jpg",
+      "sha256": "127521dbf718e946d6132394eb5527a0794132c303039ee89ec6c031812a28ef"
+    },
+    {
+      "file": "green_晋.jpg",
+      "sha256": "157e15b34d0c82beac0c58385ee8aa40670046a71d2dfe4dad9ec18aec384aa5"
+    },
+    {
+      "file": "green_蒙.jpg",
+      "sha256": "a63bc97f0fd6617da80738ac258ef0d39a7aced3b6c8d479e8d01bbee74f73ac"
+    },
+    {
+      "file": "green_辽.jpg",
+      "sha256": "830380c6f90817251d4f37b46e07ebb6e565b5e5b8f492de4a0823b01b50f53e"
+    },
+    {
+      "file": "green_吉.jpg",
+      "sha256": "4c9cdecd900da31af1776fddd8574f3327b121c952bf424746ac1458cbad6514"
+    },
+    {
+      "file": "green_黑.jpg",
+      "sha256": "321f814423a875136473e74897b6ac68a96ce324d645b59027287fb95e510622"
+    },
+    {
+      "file": "green_沪.jpg",
+      "sha256": "8ca4c94c1261121a6c38b2a69213da3c014f006a5e1bb20ea658122972e50fa8"
+    },
+    {
+      "file": "green_苏.jpg",
+      "sha256": "990eca2d0d602531ea39c8335f258c767bf160c46b15d06196f283d9b7c29cd2"
+    },
+    {
+      "file": "green_浙.jpg",
+      "sha256": "fb7a311322e76e4ab720e04bc698cfd57fcfb2993f9a9edb6bd253bfff66e6d5"
+    },
+    {
+      "file": "green_皖.jpg",
+      "sha256": "63058d8811cf39376587577b4e76961d4f89c67e75a4a52e42e8a6cc85173d64"
+    },
+    {
+      "file": "green_闽.jpg",
+      "sha256": "3ce6b611bc44f40664b8242f14d3ab08e2c2246ee41a0f9b092b2269f9cccaa6"
+    },
+    {
+      "file": "green_赣.jpg",
+      "sha256": "5b2b0ae3c31ed323104eefa7bcc8cb69f248705108485502a7c84453e9dcbf76"
+    },
+    {
+      "file": "green_鲁.jpg",
+      "sha256": "7538b0ac80c944ba26483d2f3a4144f2b8bdc17bbcdb39f6c37bdeed94bb04bc"
+    },
+    {
+      "file": "green_豫.jpg",
+      "sha256": "a00d13d20c426d749576c0aa3f77a6cf4122354377c073e0738136bb46ffc41a"
+    },
+    {
+      "file": "green_鄂.jpg",
+      "sha256": "878915721291d1dd2169aaa96da021e1fa7db2dc4d21147fcc49399f8155e808"
+    },
+    {
+      "file": "green_湘.jpg",
+      "sha256": "5e7bdcf5a9c0d2479307bc8107ce592b943efe6599aaaa4f66b325c79fb6bcee"
+    },
+    {
+      "file": "green_粤.jpg",
+      "sha256": "28d4e6ea72d6e301c096c0c6088630f19a791b53b0c8590c0567f8c7d61cebf3"
+    },
+    {
+      "file": "green_桂.jpg",
+      "sha256": "27dae3dc4cc546eff2e46340a12bb36ca3898acc30779115ed56914a08b4084a"
+    },
+    {
+      "file": "green_琼.jpg",
+      "sha256": "e4ab4b85c5a75563b490c5a10abd610185246c4801b737941dde160ff67303be"
+    },
+    {
+      "file": "green_渝.jpg",
+      "sha256": "dbe04ca846fa727950aea753f19095cc5421047560e606420bd1d10a23476d53"
+    },
+    {
+      "file": "green_川.jpg",
+      "sha256": "7ea490cf0c10be745a8c987752fa5419bbbcfbce15f72b0ee7499c155f585392"
+    },
+    {
+      "file": "green_贵.jpg",
+      "sha256": "60a037be4a01654ca6a20c39092b685a1ac98a3864d5f5550df415563975eda9"
+    },
+    {
+      "file": "green_云.jpg",
+      "sha256": "7ecbdc4907ae24919dca7fdb9649a0fd3ad583d7c6cfa363381f2487049d0f11"
+    },
+    {
+      "file": "green_藏.jpg",
+      "sha256": "d7deec82f1578a51e8d2af39073ad3dc1bf73f35404ac62b3e2b9465e9a787c9"
+    },
+    {
+      "file": "green_陕.jpg",
+      "sha256": "0ad7ed3b45210c576fa9d31191fa8b94652824feac66130cd242212208dc24ec"
+    },
+    {
+      "file": "green_甘.jpg",
+      "sha256": "6a880e3c0615e2359e7982ad6c31b8e9777c0b6b3271ea020a1d57de2bbc4f96"
+    },
+    {
+      "file": "green_青.jpg",
+      "sha256": "80b82a94e88b57d0d771d132ae57fb5067bd315838e092519f8f67480045ff25"
+    },
+    {
+      "file": "green_宁.jpg",
+      "sha256": "c1fbb78cab64eac86191bd9051e02b54c82c8c637dbaf251e8b15ef9e5685d2d"
+    },
+    {
+      "file": "green_新.jpg",
+      "sha256": "7b401fc9dfe59513526725e1a7e3a487b0346aef87483be42f8d503134e46a17"
+    }
+  ],
+  "sha256": "6f6a18bedce67865d9e284fce90dac4bf48af7d9efbb7f148091168a07be1215"
+}

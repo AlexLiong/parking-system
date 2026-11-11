@@ -1,0 +1,26 @@
+﻿# 后端运行依赖（跨平台，Python 3.11–3.14）
+# 说明：采用兼容区间约束，便于 Windows / macOS / Linux 均能解析到可用 wheel；
+#       精确锁定的、已在 macOS(Python 3.14) 全量通过测试的版本见 requirements.lock.txt。
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29
+opencv-python-headless>=4.9
+sqlalchemy>=2.0,<3.0
+pyyaml>=6.0
+reportlab>=4.0
+matplotlib>=3.8
+python-multipart>=0.0.9
+pyjwt>=2.8
+numpy>=1.26
+pillow>=10.0
+onnxruntime>=1.17
+
+# 测试
+pytest>=8.0
+httpx>=0.27
+
+# 可选：训练字符识别 CNN 时需要（推理不依赖，推理仅用 onnxruntime）
+# torch>=2.2
+# 本地 vendored HyperLPR3 的日志依赖；不安装上游包（避免重复 OpenCV）
+loguru>=0.7,<1
+# Windows 无系统 IANA 数据库时支持 ZoneInfo
+tzdata>=2025.1

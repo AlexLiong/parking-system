@@ -1,0 +1,13 @@
+**/.git
+**/.venv*
+**/__pycache__
+**/.pytest_cache
+**/node_modules
+**/data
+**/build
+**/native-dist*
+**/_qa_audit
+**/datasets/style-*
+**/datasets/external
+**/datasets/real
+**/.DS_Store
